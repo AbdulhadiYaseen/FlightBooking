@@ -18,7 +18,7 @@ export class BookFlightsComponent implements OnInit {
   arriveDate: string = this.service.arriveDate;
   numberOfTravellers = this.service.numberOfTravellers;
   class: string = this.service.class;
-  price:number=this.service.price;
+  ticketPrice:number=this.service.ticketPrice;
   flights: any;
   // isExpanded = false;
 

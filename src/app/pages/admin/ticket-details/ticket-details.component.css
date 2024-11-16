@@ -1,49 +1,68 @@
+.mainContsiner {
+    padding: 2;
+    min-height: 100vh;
+    overflow-y: 'auto';
+    background-color: rgb(88, 127, 170);
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-y: 'auto';
+    background-color: rgb(88, 127, 170);
+}
+
 .fullGrid {
-    background-color: rgb(88 127 170);
     width: 100%;
     height: 100%;
 }
 
-.leftCol{
-    height: 100vh;    
-}
-.rightCol{
+.leftCol {
     height: 100vh;
-    display: flex;    
-    justify-content: space-around;
 }
 
-.grid{
-    /* position: absolute;
-    left: 8%;
-    top: 5%;
-    width: 1000px; */
+.rightCol {
+    height: 100vh;
+}
+
+.grid {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
-.gridTitle{
+.gridTitle {
     position: absolute;
     top: 10%;
 }
-.card{
-    width: 700px;
-    height: 100px;
+
+.card1 {
+    width: 600px;
+    height: 80px;
     border-radius: 10px;
-    background-color: black;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .cardDetails {
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
-    height: 600px;
-    /* background-color: white; */
+    height: 700px;
     padding: 20px;
     width: 700px;
     border-radius: 20px;
     text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
 }
 
 .tripDetails {
@@ -80,10 +99,32 @@
     font-size: 20px;
 }
 
-.button{
-    margin: 25px 262px;
-    margin-top: 25px;
+.button {
+    margin: 20px auto;
+    padding-top: 20px;
+    /* margin-top: 25px; */
     font-size: 15px;
-    width: 50px;
-    background-color: (88 127 170);
+    width: 500px;
+    height: 50px;
+    background-color: rgb(88, 127, 170) !important;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
 }
+
+
+.example-section {
+    margin: 12px 0;
+}
+
+.example-margin {
+    margin: 0 12px;
+}
+
+.ul {
+    list-style-type: none;
+    margin-top: 4px;
+}
+

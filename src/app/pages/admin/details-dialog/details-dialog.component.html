@@ -1,0 +1,56 @@
+<h2 mat-dialog-title>Enter Passenger details</h2>
+
+<mat-dialog-content>
+
+    <div class="main">
+
+        <div>
+
+            <p style="color:black; font-weight: bold; width: 100px;">
+                Gender
+            </p>
+            <mat-button-toggle-group [(ngModel)]="gender">
+                <mat-button-toggle>Male</mat-button-toggle>
+                <mat-button-toggle>Female</mat-button-toggle>
+            </mat-button-toggle-group>
+        
+        </div>
+
+        <div class="second">
+            <!-- <p style="color:black;">
+                Enter the name according to Passport
+            </p> -->
+
+            <mat-form-field class="example-full-width">
+                <mat-label [(ngModel)]="firstName"> First/Middle Name </mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label [(ngModel)]="lastName"> Last Name </mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label [(ngModel)]="passport"> Passport Number </mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label [(ngModel)]="contact"> Contact Number </mat-label>
+                <input matInput>
+            </mat-form-field>
+
+
+        </div>
+
+
+        <div class="buttonDiv">
+            <button class="button">
+                Save and Continue
+            </button>
+        </div>
+
+    </div>
+
+</mat-dialog-content>

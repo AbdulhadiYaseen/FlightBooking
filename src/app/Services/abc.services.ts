@@ -11,8 +11,18 @@ export class API{
         
     }
  
-    getSudent(id: number){
-        const URL = `/api/STUDENTS/${id}`
+    getAllAirports(){
+        const URL = '/getAirports'
         return this.apiService.get(URL);
     }
+
+    getTicketPrice(departureAirport: string, arrivalAirport: string){
+        const URL = '/postAirports'
+        const body = {
+            departureAirport: departureAirport,
+            arrivalAirport: arrivalAirport
+        };
+        return this.apiService.post(URL,body);
+    }
+
 }

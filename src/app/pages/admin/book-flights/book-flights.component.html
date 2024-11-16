@@ -31,14 +31,14 @@
         <mat-card appearance="outlined" class="card mx-auto">
             <mat-card-content class="d-flex flex 100 h-100">
                 <div class="ms-0 me-auto">
-                    <var class="cities">11:40 KARACHI ----------- 21:45 MUNICH</var>
+                    <var class="cities">11:40 {{departureAirport}} ----------- 21:45 {{arrivalAirport}}</var>
                     <p class="non-stop">Non-stop 10h 5m</p>
                 </div>
                 <div class="me-0 ms-auto mt-auto mb-auto">
                     <button class="button" (click)="ticketDetails()">
                         <div class="classCost">
                             <p class="classs">{{class}}</p>
-                            <p class="cost">${{price}}</p>
+                            <p class="cost">${{ticketPrice}}</p>
                         </div>
                     </button>
                 </div>
@@ -48,14 +48,14 @@
         <mat-card appearance="outlined" class="card mx-auto">
             <mat-card-content class="d-flex flex 100 h-100">
                 <div class="ms-0 me-auto">
-                    <var class="cities">11:40 KARACHI ----------- 21:45 MUNICH</var>
+                    <var class="cities">11:40 {{departureAirport}} ----------- 21:45 {{arrivalAirport}}</var>
                     <p class="non-stop">Non-stop 10h 5m</p>
                 </div>
                 <div class="me-0 ms-auto mt-auto mb-auto">
                     <button class="button" (click)="ticketDetails()">
                         <div class="classCost">
                             <p class="classs">{{class}}</p>
-                            <p class="cost">${{price}}</p>
+                            <p class="cost">${{ticketPrice}}</p>
                         </div>
                     </button>
                 </div>
@@ -65,14 +65,14 @@
         <mat-card appearance="outlined" class="card mx-auto">
             <mat-card-content class="d-flex flex 100 h-100">
                 <div class="ms-0 me-auto">
-                    <var class="cities">13:00 KARACHI ----------- 23:05 MUNICH</var>
+                    <var class="cities">13:00 {{departureAirport}} ----------- 23:05 {{arrivalAirport}}</var>
                     <p class="non-stop">Non-stop 10h 5m</p>
                 </div>
                 <div class="me-0 ms-auto mt-auto mb-auto">
                     <button class="button" (click)="ticketDetails()">
                         <div class="classCost">
                             <p class="classs">{{class}}</p>
-                            <p class="cost">${{price}}</p>
+                            <p class="cost">${{ticketPrice}}</p>
                         </div>
                     </button>
                 </div>
@@ -95,7 +95,7 @@
                                     <button class="button" (click)="ticketDetails()">
                                         <div class="classCost">
                                             <p class="classs">{{class}}</p>
-                                            <p class="cost">${{price}}</p>
+                                            <p class="cost">${{ticketPrice}}</p>
                                         </div>
                                     </button>
                                 </div>

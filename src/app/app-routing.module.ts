@@ -10,7 +10,9 @@ import { TicketDetailsComponent } from './pages/admin/ticket-details/ticket-deta
 import { TicketComponent } from './pages/admin/ticket/ticket.component';
 
 const routes: Routes = [
-
+  {
+    path:'',redirectTo:'/home',pathMatch:'full'
+  },
   {
     path: 'book-flights',
     component: BookFlightsComponent

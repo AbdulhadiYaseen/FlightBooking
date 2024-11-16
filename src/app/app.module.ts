@@ -29,7 +29,9 @@ import { RegisterComponent } from './pages/admin/register/register.component';
 import { AboutComponent } from './pages/admin/about/about.component';
 import { TicketDetailsComponent } from './pages/admin/ticket-details/ticket-details.component';
 import { TicketComponent } from './pages/admin/ticket/ticket.component';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DetailsDialogComponent } from './pages/admin/details-dialog/details-dialog.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { TicketComponent } from './pages/admin/ticket/ticket.component';
     AboutComponent,
     TicketDetailsComponent,
     TicketComponent,
+    DetailsDialogComponent,
     
   ],
   imports: [
@@ -60,7 +63,9 @@ import { TicketComponent } from './pages/admin/ticket/ticket.component';
     MatRadioModule,
     MatGridListModule,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule,
+    MatButtonToggleModule
   ],
   providers: [
     provideClientHydration(),

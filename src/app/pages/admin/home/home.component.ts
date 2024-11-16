@@ -14,12 +14,4 @@ constructor(private api: API){
 
 }
 
-getStudents(){
-  this.api.getSudent(1).subscribe((res: any)=>{
-    console.log(res)
-  })
-
-  console.log("Working")
-}
-
 }

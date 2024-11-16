@@ -7,3 +7,9 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.custom-dialog-container {
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: rgb(88, 127, 170);
+}

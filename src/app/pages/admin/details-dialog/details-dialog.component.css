@@ -1,0 +1,35 @@
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.firstRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.second {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+.button {
+    color: white;
+    background-color: rgb(88, 127, 170);
+    width: 250px;
+    height: 50px;
+    
+}
+
+.buttonDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

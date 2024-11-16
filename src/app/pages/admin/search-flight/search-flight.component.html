@@ -16,11 +16,12 @@
                 <div class="col-md-5">
                     <mat-form-field class="w-100 from">
                         <mat-label>
-                            Departure<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="flight_takeoff"
-                                class="icon"></mat-icon>
+                            Departure<mat-icon aria-hidden="false" aria-label="Example home icon"
+                                fontIcon="flight_takeoff" class="icon"></mat-icon>
                         </mat-label>
-                        <mat-select [(ngModel)]="deapartureAirport">
-                            <mat-option *ngFor="let city of cityList" [value]="city">{{city}}</mat-option>
+                        <mat-select [(ngModel)]="departureAirport">
+                            <mat-option *ngFor="let city of airports"
+                                [value]="city.iata">{{city.airport}}</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </div>
@@ -34,8 +35,8 @@
                                 class="icon"></mat-icon>
                         </mat-label>
                         <mat-select [(ngModel)]="arrivalAirport">
-                            <div *ngFor="let city of cityList">
-                                <mat-option [value]="city">{{city}}</mat-option>
+                            <div *ngFor="let city of airports">
+                                <mat-option [value]="city.iata">{{city.airport}}</mat-option>
                             </div>
                         </mat-select>
                     </mat-form-field>
@@ -46,7 +47,7 @@
                 <div class="col-md-3">
                     <mat-form-field class="w-100 date">
                         <mat-label>Choose a date</mat-label>
-                        <input matInput [matDatepicker]="picker" [(ngModel)]="departDate">
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="departDate" [min]="today">
                         <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
@@ -55,7 +56,7 @@
                 <div class="col-md-3" *ngIf="selectedValue == '1'">
                     <mat-form-field class="w-100 date">
                         <mat-label>Choose a return date</mat-label>
-                        <input matInput [matDatepicker]="picker" [(ngModel)]="arriveDate">
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="arriveDate" [min]="departDate">
                         <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
@@ -80,7 +81,11 @@
             <div class="text-center mt-4">
                 <input type="checkbox" id="start" class="d-none" />
                 <label for="start">
-                    <div class="btn btn-primary d-flex justify-content-center align-items-center button button-71" (click)="searchFlights()">
+                    <div class="btn btn-primary d-flex justify-content-center align-items-center button button-71"
+                        (click)="searchFlights()"
+                        [ngClass]="{'loading': isLoading}">
+                        <span *ngIf="!isLoading">Search</span> 
+                        <span *ngIf="isLoading">Loading...</span>
                         Search <i class="fab fa-telegram-plane ms-2 plane"></i>
                     </div>
                 </label>
